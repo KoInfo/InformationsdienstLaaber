@@ -40,7 +40,7 @@ jobs:
         run: npm run build
         env:
           # For Vite, you need to use VITE_ prefix for env variables
-          VITE_BASE: /lolos/
+          VITE_BASE: /InformationsdienstLaaber/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
