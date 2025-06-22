@@ -39,12 +39,13 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          PUBLIC_URL: /lolos
+          # For Vite, you need to use VITE_ prefix for env variables
+          VITE_BASE: /lolos/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist  # Changed from ./build to ./dist
 
   # Deployment job
   deploy:
